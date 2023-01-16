@@ -17,7 +17,7 @@ public class ButtonControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        displayText.text = "0";
+        //displayText.text = "0";
     }
 
     public void btn1()
@@ -67,7 +67,11 @@ public class ButtonControl : MonoBehaviour
     }
     public void btn6()
     {
-        displayText.text += "6";
+        if (displayText.text != "0")
+        {
+            displayText.text += "6";
+        }
+        else { displayText.text = "6"; }
     }
 
     public void btn7()
